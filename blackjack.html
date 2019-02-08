@@ -16,11 +16,11 @@ var player = [getCard(), getCard()];
 
 alert('Дилер: ' + dealer.join(' ')+ ' Игрок: ' + player.join(' '));
 
-function getSum(arr) {
+function getSum(hand) {
 	var sum = 0;
 	
 	for (var i=0; i<hand.length;i++) {
-		var card hand[i];
+		var card = hand[i];
 		if (card !='A') {
 			if (card =='J' || card == 'Q' || card == 'K') {
 				sum = sum +10;
@@ -31,8 +31,8 @@ function getSum(arr) {
 	}
 	
 	for (var i=0; i<hand.length;i++) {
-		var card hand[i];
-		if (card ='A') {
+		var card = hand[i];
+		if (card =='A') {
 			if (sum >10) {
 				sum = sum +1;
 			} else {
