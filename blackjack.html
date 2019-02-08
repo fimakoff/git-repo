@@ -17,10 +17,29 @@ var player = [getCard(), getCard()];
 alert('Дилер: ' + dealer.join(' ')+ ' Игрок: ' + player.join(' '));
 
 function getSum(arr) {
-	var sum = arr.length;
+	var sum = 0;
 	
+	for (var i=0; i<hand.length;i++) {
+		var card hand[i];
+		if (card !='A') {
+			if (card =='J' || card == 'Q' || card == 'K') {
+				sum = sum +10;
+			} else {
+				sum = sum + parseInt(card);
+			}
+		}
+	}
 	
-	
+	for (var i=0; i<hand.length;i++) {
+		var card hand[i];
+		if (card ='A') {
+			if (sum >10) {
+				sum = sum +1;
+			} else {
+				sum = sum + 11;
+			}
+		}
+	}
 	return sum;
 } 
 
