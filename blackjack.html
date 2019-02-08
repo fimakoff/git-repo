@@ -68,7 +68,8 @@ if (getSum(player) == 21) {
 			} else if (sum > 21) {
 				alert('Перебор! ' + getStatus());
 				break;
-			} else {
+			} 
+		} else {
 				// Игрок закончил брать карты
 
 				// Очередь дилера
@@ -92,8 +93,6 @@ if (getSum(player) == 21) {
 					alert('Проигрыш! ' + getStatus());
 				}
 			}
-		}
-		alert(getStatus());
 	} while (answer == '1');
 }
 </script>
