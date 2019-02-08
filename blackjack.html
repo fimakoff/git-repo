@@ -11,7 +11,10 @@ function getCard(){
 	return cards[getRandomInt(0,cards.length - 1)];
 }
 
+var dealer = [getCard()];
+var player = [getCard(), getCard()];
 
+alert('Дилер: ' + dealer.join(' ')+ ' Игрок: ' + player.join(' '));
 
 
 
