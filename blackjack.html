@@ -15,10 +15,10 @@ var dealer = [getCard()];
 var player = [getCard(), getCard()];
 
 function getStatus() {
-	return 'Дилер: ' + dealer.join(' ') + 
+	return ('Дилер: ' + dealer.join(' ') + ' Игрок: ' + player.join(' ') + '.')
 }
 
-alert('Дилер: ' + dealer.join(' ')+ ' Игрок: ' + player.join(' '));
+alert(getStatus());
 
 function getSum(hand) {
 	var sum = 0;
@@ -49,6 +49,15 @@ function getSum(hand) {
 
 alert('Текущая сумма карт у игрока: ' + getSum(player));
 
+var answer = '';
+do {
+	answer = prompt(getStatus() + ' Хотите еще карту? 1 - да, иначе - нет');
 
+	// сдаем карту игроку либо прекращаем игру
+	if (answer == '1') {
+		player.push(getCard());
+	}
+	alert(getStatus());
+} while (answer == '1');
 
 </script>
