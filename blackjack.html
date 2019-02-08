@@ -14,6 +14,10 @@ function getCard(){
 var dealer = [getCard()];
 var player = [getCard(), getCard()];
 
+function getStatus() {
+	return 'Дилер: ' + dealer.join(' ') + 
+}
+
 alert('Дилер: ' + dealer.join(' ')+ ' Игрок: ' + player.join(' '));
 
 function getSum(hand) {
