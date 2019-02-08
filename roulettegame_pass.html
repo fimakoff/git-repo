@@ -5,8 +5,9 @@
 var arr= [];
 var rounds = 100;
 var zeros = 0;
-var max_length= 0;
-var length = 0;
+var max_length_r= 0;
+var max_length_b= 0;
+var length_r = 0;
 var i = 0;
 
 for(i=0;i<=rounds;i++){
@@ -23,17 +24,27 @@ for(i=0;i<arr.length;i++)
 {
 
 	if(arr[i] == 1) {
-		length = 0;
+		length_r = 0;
 		while(i<arr.length && arr[i]==1){
 			i++;
-			length++;
+			length_r++;
 		}
-		if(length>max_length) {
-			max_length = length;
+		if(length_r>max_length_r) {
+			max_length_r = length_r;
+		}
+	}
+	else  {
+		length_b = 0;
+		while(i<arr.length && arr[i]==-1){
+			i++;
+			length_b++;
+		}
+		if(length_b>max_length_b) {
+			max_length_b = length_b;
 		}
 	}
 }
 
-alert("Максимально длинная крсная последовательность: " + max_length);
+alert("Максимально длинная красная последовательность: " + max_length_r + '\n' + "Максимально длинная черная последовательность: " + max_length_b);
 
 </script>
