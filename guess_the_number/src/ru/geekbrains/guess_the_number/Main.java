@@ -7,17 +7,15 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        for (int i = 10; i < 30; i += 10){
-            
-        }
-//        System.out.println("Ваша задача угадать число.");
-//        int range = 30;
-//        int number = (int)(Math.random() * range);
-//        playLevel(range, number);
-//        scanner.close();
+
+        System.out.println("Ваша задача угадать число.");
+        for (int i = 10; i <= 30; i += 10) playLevel(i);
+        System.out.println("Вы выиграли!!!");
+        scanner.close();
     }
 
-    private static void playLevel(int range, int number){
+    private static void playLevel(int range){
+        int number = (int) (Math.random() * range);
         int total = 1;
         while(true){
             System.out.println("Угадайте число от 0 до " + range);
